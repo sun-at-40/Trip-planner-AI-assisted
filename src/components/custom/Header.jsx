@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Button } from '../ui/button'
-import { Compass, LogOut, MapPinned, Plus } from 'lucide-react'
+import { Compass, LogOut, MapPinned, MessageCircle, Plus } from 'lucide-react'
 import {
   Popover,
   PopoverContent,
@@ -59,6 +59,7 @@ function Header() {
             <nav className="header-nav" aria-label="Main navigation">
               <a href="/create-trip"><Plus size={16} />Create trip</a>
               <a href="/my-trips"><MapPinned size={16} />My trips</a>
+              <a href="/agent-chat"><MessageCircle size={16} />Travel agent</a>
             </nav>
             <Popover>
               <PopoverTrigger asChild>

@@ -68,3 +68,19 @@ Responsive view on mobile: <br>
 - Node.js & npm
 - Firebase Project: Set up a Firebase project and configure Firestore and Authentication. Obtain your Firebase configuration keys.
 - Google API Keys: Obtain API keys for Google Generative AI and Google Places API.
+
+<h2>Python Agent Chat</h2>
+
+The **Travel agent** menu opens a chat backed by the Python FastAPI service in the companion `AI_Trip_Planner` project. Start that service with its virtual environment activated:
+
+```powershell
+uvicorn main:app --reload
+```
+
+Then start this React app in a separate terminal:
+
+```powershell
+npm run dev
+```
+
+The chat uses `http://localhost:8000` by default. To point it elsewhere, set `VITE_PYTHON_API_URL` in this project's `.env.local`. Keep the Python service's API keys in the Python project's `.env`; do not put them in the Vite frontend.
